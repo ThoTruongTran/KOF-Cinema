@@ -1,0 +1,276 @@
+/* --- CONTAINER CHÍNH --- */
+.profile-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* Thẻ card mở rộng */
+.profile-card {
+    background: white;
+    width: 95%;
+    max-width: 1300px;
+    display: flex; /* Chia 2 cột chính */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    min-height: 700px;
+}
+
+/* --- CỘT TRÁI: AVATAR (Màu đỏ đô) --- */
+.profile-header {
+    flex: 0 0 400px; /* Cố định độ rộng cột trái */
+    background: linear-gradient(180deg, #8e0000, #4a0000);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.avatar-circle {
+    width: 150px;
+    height: 150px;
+    background: white;
+    color: #8e0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* --- CỘT PHẢI: THÔNG TIN --- */
+.profile-body {
+    flex: 1; /* Tự động giãn nở phần còn lại */
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+/* Nhóm thông tin Email/SĐT */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: auto; /* Đẩy cụm ví xuống đáy */
+}
+
+.info-group {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.info-group label {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.info-group p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* --- PHẦN VÍ VÀ HÀNH ĐỘNG (FIX LỖI TRÀN) --- */
+.wallet-actions-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: #fffafa;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #ffe5e5;
+    margin-top: 40px;
+}
+
+/* Cụm Số dư và Nút bên trái */
+.balance-and-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.system-balance-info label {
+    font-size: 14px;
+    color: #666;
+}
+
+.balance-amount-small .balance-value {
+    font-size: 28px; /* Thu nhỏ số tiền */
+    font-weight: 700;
+    color: #d32f2f;
+}
+
+.balance-amount-small .balance-currency {
+    font-size: 16px;
+    color: #d32f2f;
+    margin-left: 5px;
+}
+
+/* Nút nạp tiền nhỏ gọn */
+.btn-recharge-small {
+    width: fit-content;
+    padding: 10px 25px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-recharge-small:hover {
+    background: #8e0000;
+}
+
+/* Thẻ ví Cardano bên phải --- */
+.blockchain-wallet-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.wallet-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.wallet-card-header strong {
+    font-size: 12px;
+    color: #444;
+}
+
+.network-badge {
+    background: #e3f2fd;
+    color: #1565c0;
+    font-size: 9px;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.wallet-card-address code {
+    display: block;
+    background: #f9f9f9;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 11px;
+    color: #555;
+    word-break: break-all;
+    border: 1px solid #eee;
+}
+/* Container ví chia 2 cụm */
+.wallet-actions-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: #fffafa;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ffebeb;
+    margin-top: 30px;
+}
+
+.balance-and-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa cụm số dư và nút nạp tiền */
+}
+
+.system-balance-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Khoảng cách VNĐ và tADA */
+}
+
+/* VNĐ Style */
+.balance-amount-small .balance-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #d32f2f;
+}
+
+/* tADA Style mới */
+.balance-blockchain-small {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.balance-blockchain-small .ada-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0277bd; /* Màu xanh của Cardano */
+}
+
+.balance-blockchain-small .ada-currency {
+    font-size: 12px;
+    color: #0277bd;
+    font-weight: 500;
+}
+
+/* Nút nạp tiền thu nhỏ */
+.btn-recharge-small {
+    width: fit-content;
+    padding: 8px 16px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* Thẻ ví Cardano bên phải */
+.blockchain-wallet-card {
+    background: white;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    width: 260px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+/* Định dạng nút Đăng xuất */
+.btn-logout-profile {
+    background-color: #f8f9fa; /* Màu nền sáng nhẹ */
+    color: #dc3545;            /* Chữ màu đỏ để cảnh báo logout */
+    border: 1px solid #dc3545; /* Viền đỏ mảnh */
+    padding: 8px 20px;
+    border-radius: 20px;       /* Bo tròn mềm mại */
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+}
+
+/* Hiệu ứng khi di chuột qua (Hover) */
+.btn-logout-profile:hover {
+    background-color: #dc3545; /* Đổi nền sang đỏ */
+    color: white;              /* Chữ sang trắng */
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2); /* Đổ bóng nhẹ */
+    transform: translateY(-2px); /* Nhích nhẹ lên trên */
+}
+
+/* Hiệu ứng khi bấm vào */
+.btn-logout-profile:active {
+    transform: translateY(0);
+}
