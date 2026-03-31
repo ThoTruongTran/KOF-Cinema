@@ -28,10 +28,9 @@ useEffect(() => {
 
         {/* Phần Menu đường dẫn */}
         <ul className="nav-links">
-          <li><Link to="/Rap-phim">Rạp phim</Link></li>
+          <li><Link to="/Trang-chu">Trang chủ</Link></li>
           <li><Link to="/lich-chieu">Lịch Chiếu</Link></li>
           <li><Link to="/gia-ve">Giá Vé</Link></li>
-          <li><Link to="/phim">Phim</Link></li>
           <li><Link to="/khuyen-mai">Khuyến mãi</Link></li>
           <li><Link to="/user">Nguoi dung</Link></li>
           {/* <li><Link to="/user">Người dùng</Link></li> */}

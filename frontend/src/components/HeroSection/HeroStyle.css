@@ -1,0 +1,22 @@
+.hero-carousel {
+  width: 100%;
+  height: auto;
+  /* Vì Navbar của bạn là fixed, cần đẩy banner xuống */
+  margin-top: 80px; 
+}
+
+.hero-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tùy chỉnh màu các nút điều hướng cho tông đỏ của bạn */
+.swiper-button-next, .swiper-button-prev {
+  color: var(--color-primary-red) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-primary-red) !important;
+}

@@ -1,0 +1,189 @@
+/* --- 1. PHẦN CỐT LÕI (MOVIE SECTION & TABS) --- */
+.movie-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.tab-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.3s;
+  border-bottom: 3px solid transparent;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.tab-btn.active {
+  color: var(--color-dark-burgundy); /* #6A1B24 */
+  border-bottom: 3px solid var(--color-dark-burgundy);
+}
+
+/* --- 2. GRID VÀ MOVIE CARD --- */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.movie-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-card h3 {
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 15px 10px 5px;
+  line-height: 1.4;
+  color: var(--color-dark-burgundy);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 45px; /* Giữ tiêu đề đều nhau */
+}
+
+.movie-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+/* --- 3. HỆ THỐNG NÚT BẤM (CẬP NHẬT MỚI) --- */
+.card-buttons {
+  margin-top: auto; /* Đẩy toàn bộ cụm nút xuống đáy */
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-trailer {
+  background-color: transparent;
+  color: var(--color-primary-red); /* #C84B5E */
+  border: 1px solid var(--color-primary-red);
+  padding: 10px;
+  margin: 0 15px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.btn-trailer:hover {
+  background-color: var(--color-light-pink); /* #F0D9E1 */
+}
+
+.btn-buy {
+  background-color: var(--color-primary-red);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-buy:hover {
+  background-color: var(--color-deep-red); /* #B01E2E */
+}
+
+/* --- 4. MODAL TRAILER CĂN GIỮA (STYLE BETA CINEMAS) --- */
+.trailer-modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85); /* Nền tối phía sau */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.beta-modal-content {
+  background: white;
+  width: 90%;
+  max-width: 850px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: modalPopUp 0.3s ease-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-dark-burgundy);
+  font-weight: bold;
+}
+
+.beta-close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #999;
+  line-height: 1;
+}
+
+.beta-close-btn:hover {
+  color: var(--color-primary-red);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* Tỷ lệ 16:9 */
+  height: 0;
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+@keyframes modalPopUp {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
