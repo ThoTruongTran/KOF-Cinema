@@ -1,0 +1,101 @@
+.footer {
+  background-color: #6A1B24; /* Màu đỏ đô chủ đạo của bạn */
+  color: #F0D9E1; /* Màu hồng nhạt cho chữ */
+  padding: 60px 0 20px 0;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Chia 4 cột đều nhau */
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.footer-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #E5B7C6;
+}
+
+.footer-column h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Gạch chân đỏ dưới tiêu đề cột cho giống web mẫu */
+.footer-column h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #C84B5E;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #E5B7C6;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+  padding-left: 5px; /* Hiệu ứng dịch nhẹ khi hover */
+}
+
+.footer-column p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #E5B7C6;
+}
+
+.download-text {
+  font-weight: bold;
+  margin-top: 20px;
+  color: #fff !important;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(229, 183, 198, 0.6);
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
